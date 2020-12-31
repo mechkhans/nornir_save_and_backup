@@ -1,0 +1,43 @@
+---
+## example of device which can work without any alteration to its parameters.
+
+lab-mgmt-sw01:
+  hostname: 10.10.10.6
+  groups:
+    - junos
+
+## example of device using enable-secret.
+
+lab-mgmt-rt01:
+  hostname: 10.10.10.8
+  groups:
+    - eos
+  connection_options:
+    scrapli:
+      extras:
+        auth_secondary: 'xxxx'
+
+## example of a device using telnet as transport.
+
+lab-mgmt-sw02:
+  hostname: 10.10.10.10
+  groups:
+    - ios
+  connection_options:
+    scrapli:
+      extras:
+        transport: 'telnet'
+        port: 23
+
+## example of a device using its own unique creds.
+
+lab-mgmt-sw04:
+  hostname: 10.10.10.12
+  groups:
+    - ios
+  connection_options:
+    scrapli:
+      extras:
+        auth_username: 'xxxx'
+        auth_password: 'xxxx'
+        auth_secondary: 'xxxx'

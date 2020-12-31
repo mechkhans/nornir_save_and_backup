@@ -1,0 +1,21 @@
+---
+junos:
+  platform: junos
+  connection_options:
+    scrapli:
+      platform: juniper_junos
+      port: 22
+
+eos:
+  platform: eos
+  connection_options:
+    scrapli:
+      platform: arista_eos
+      port: 22
+
+ios:
+  platform: ios
+  connection_options:
+    scrapli:
+      platform: cisco_iosxe
+      port: 22
