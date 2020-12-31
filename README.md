@@ -5,7 +5,7 @@ The python script named "nornir_save_and_backup.py" is pretty lightweight, and h
 
 In its simplest explanation, Nornir works with yaml files that feed information to the code.
 
--- The directory named Inventory stores 4 yaml files:
+## The directory named Inventory stores 4 yaml files:
 
    - hosts.yaml
    - groups.yaml
@@ -22,7 +22,7 @@ In its simplest explanation, Nornir works with yaml files that feed information 
 
 collect_config function in the script first creates a directory called 'configs' if not already present, and then creates directories per the name of platform (a.k.a vendor), and finally writes file with name of the txt file same as the hostname of the device.
 
-A few notes on Scrapli:
+### few notes on Scrapli:
 
 - Enable secret in Scrapli is passed with 'auth_secondary' keyword, if 'auth_secondary' is specified under a host, then scrapli would escalate privelege without any user intervention.
 
