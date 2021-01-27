@@ -27,7 +27,7 @@ junosd = nr.filter(platform="junos")
 
 def collect_config(task):
     config_dir = "configs"
-    entry_dir = config_dir + "/" + str(task.host.groups[0])
+    entry_dir = config_dir + "/" + str(task.host.platform)
     pathlib.Path(config_dir).mkdir(exist_ok=True)
     pathlib.Path(entry_dir).mkdir(exist_ok=True)
 
